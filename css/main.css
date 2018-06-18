@@ -1,14 +1,52 @@
-body {
-    background-image: url("./../images/background.jpeg");
+.navbar{
+    min-height: 80px;
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
-h1 {
-    color: #666666;
+.navbar > div > div{
+    height: 80px;
+    padding-top:18px;
+}
+
+.repository-card {
+    -webkit-box-shadow: 10px 10px 87px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 87px -13px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 87px -13px rgba(0,0,0,0.75);
+    width: 20rem; 
+    height: 35em;
+}
+
+/* .aq-block aq-block-aq_blog_block{
+    padding-left: 15px !important;
+	padding-right: 15px !important;
+}
+     */
+.main_photo {
+    background: url("./../images/background.jpeg") center center no-repeat;
+    background-size: cover;
+    height: 700px;
+}
+
+.caption{
+    /* background: rgba(255, 255, 255, 0.7); */
+    background: transparent;
+    color: #000;
+    text-align: center;
+    margin-top: 70px;
+    padding: 40px;
+    font-family: 'Lora','Gravitas One', 'Arial Black', serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+h1 { 
+    color:whitesmoke;
     font-size: 4em;
     margin: 0;
     font-family: 'Gravitas One', 'Arial Black', serif;
     font-weight: normal;
     text-align: center;
+    opacity: 0.9;
 }
 
 h2,
@@ -100,7 +138,7 @@ h3 {
 }
 
 .project-container {
-    border: 1px solid orange; 
+    border: 1px solid white; 
     padding: 5px; 
     box-shadow: 5px 10px 18px #888888;
     border-radius: 10%;
