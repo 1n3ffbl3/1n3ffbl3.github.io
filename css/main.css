@@ -27,6 +27,16 @@
     height: 700px;
 }
 
+.card-title{
+    font-family:'Lora', 'Arial Black', serif;
+    
+}
+
+.card-text{
+    font-family:'Arima+Madurai', serif;
+    font-size: 15px ;
+}
+
 .caption{
     /* background: rgba(255, 255, 255, 0.7); */
     background: transparent;
@@ -34,29 +44,41 @@
     text-align: center;
     margin-top: 70px;
     padding: 40px;
-    font-family: 'Lora','Gravitas One', 'Arial Black', serif;
+    font-family: 'Lora', 'Arial Blacl', serif;
     font-weight: normal;
     text-align: center;
 }
 
-h1 { 
+h1, h2 { 
     color:whitesmoke;
     font-size: 4em;
     margin: 0;
-    font-family: 'Gravitas One', 'Arial Black', serif;
+    font-family: 'Cinzel Decorative', cursive;
+     /* 'Holtwood One SC', 'Gravitas One', 'Arial Black', serif; */
     font-weight: normal;
-    text-align: center;
+    text-align: left;
     opacity: 0.9;
+    padding-top: 20%;
+    padding-left: 5%;
 }
 
-h2,
+h3{
+    color: whitesmoke;
+    font-size: 3em;
+    font-family: 'Dancing Script', cursive;
+    text-align: left;
+    opacity: 0.5;
+    padding-left: 5%;
+}
+
+/* h2,
 h3 {
     color: rgb(34, 2, 44);
     font-family: "Palatino Linotype", Times, serif;
     border-top: 2px solid rgb(247, 242, 245);
     padding-top: 7px;
     padding-left: 100px;
-    text-align: center;
+    text-align: center; */
 }
 
 #article {
@@ -118,6 +140,12 @@ h3 {
     font-size: 5em;
 }
 
+.roundedImage {
+    border-radius: 50%;
+    max-width: 40%;
+    max-height: 40%;
+  }
+  
 .custom-image-border {
     border: 1px solid #ddd;
     /* border-radius: 4px; */
