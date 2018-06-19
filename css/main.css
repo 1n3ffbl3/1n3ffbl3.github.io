@@ -24,14 +24,23 @@
 .main_photo {
     background: url("./../images/background.jpeg") center center no-repeat;
     background-size: cover;
-    height: 700px;
+    height: 600px;
+}
+
+.book_photo{
+    background: url("./../images/coffeeAndBook.jpg") center center no-repeat;
+    background-size: cover;
+    height: 500px;
+    margin-top: 70px;
+
 }
 
 .mail_photo{
     background: url("./../images/mailbox.jpg") center center no-repeat;
     background-size: cover;
     height: 500px;
-    opacity: 0.5;
+    margin-top: 70px;
+ 
 }
 
 .card-title{
@@ -40,18 +49,31 @@
 }
 
 .card-text{
-    font-family:'Arima+Madurai', serif;
-    font-size: 15px ;
+    font-family:'Lora', serif;
+    font-size: 13px ;
 }
 
-.caption{
-    /* background: rgba(255, 255, 255, 0.7); */
+.title{
     background: transparent;
     color: #000;
     text-align: center;
     margin-top: 70px;
+    margin-bottom:20px;
     padding: 40px;
-    font-family: 'Lora', 'Arial Blacl', serif;
+    padding-top: 10px;
+    font-family: 'Lora', 'Arial Black', serif;
+    font-weight: normal;
+    text-align: center; 
+}
+
+.aboutMeText{
+    background: transparent;
+    color: #000;
+    text-align: center;
+    margin-bottom: 70px;
+    padding: 40px;
+    padding-top: 10px;
+    font-family: 'Lora', 'Arial Black', serif;
     font-weight: normal;
     text-align: center;
 }
@@ -175,10 +197,27 @@ h3 {
 
 .roundedImage {
     border-radius: 50%;
-    max-width: 35%;
-    max-height: 35%;
-    padding-top: 20px;
+    max-width: 50%;
+    max-height: 50%;
+    padding-top: 20px; 
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -70px 0 0 -170px;
   }
+
+.socialMedia{
+    width: 300px;
+    height: 100px;
+    padding: 20px;
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    margin: -70px 0 0 -170px;
+}
   
 .custom-image-border {
     border: 1px solid #ddd;
