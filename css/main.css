@@ -136,6 +136,11 @@ h3 {
     list-style: none;
   }
 
+  .flex-center{
+      display: flex;
+      justify-content: center;
+  }
+  
 #article {
     background: rgb(245, 245, 245);
     background-color: #ffdab9;
@@ -208,14 +213,12 @@ h3 {
   }
 
 .socialMedia{
-    width: 300px;
-    height: 100px;
+    /* width: 300px;
+    height: 100px; */
     padding: 20px;
-  
     position: absolute;
     top: 50%;
     left: 50%;
-  
     margin: -70px 0 0 -170px;
 }
   
