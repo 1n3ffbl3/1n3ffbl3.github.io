@@ -271,3 +271,10 @@ h3 {
 .code {
     float: left;
 }
+
+div.container.cards-page > div:nth-child(2) > div:nth-child(5) > div > img{
+	width: 100%;
+	height: 50%;
+}
+
+/* document.querySelector('body > div.container.cards-page > div:nth-child(2) > div:nth-child(5) > div > img') */
