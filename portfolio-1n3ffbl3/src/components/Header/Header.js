@@ -4,10 +4,9 @@ const Header = styled.h1`
 	font-size: 1em;
 	font-family: 'Montserrat';
 	color: white;
-	flex-shirnk: 1;
-	flex-grow: 1;
-	margin-right: 200px;
 	letter-spacing: 1px;
+	max-width: 20%;
+	flex: 1 1 100%;
 `;
 
 export default Header;
