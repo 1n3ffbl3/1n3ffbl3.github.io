@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { createGlobalStyle } from 'styled-components';
 import { Link } from "gatsby";
+import backgroundImage from "../images/background.jpg";
 
 const GlobalStyle = createGlobalStyle`
 	body {
@@ -13,20 +14,18 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const StyledWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 0 auto 12px auto;
-  &:last-child {
-    margin-bottom: 0;
-  }
+	width: 100 %;
+	height: 100vh;
+	background-image: url(${backgroundImage});
+	background-size: cover;
+	
 `;
 
 const IndexPage = () => (
 	<>
 		<GlobalStyle />
 		<StyledWrapper>
-			<h1>Hello world!</h1>
-			<Link to="/secondpage">Idź do poco loco</Link>
+			<Link to="/secondpage">Idź do second page</Link>
 		</StyledWrapper>
 	</>
 )
