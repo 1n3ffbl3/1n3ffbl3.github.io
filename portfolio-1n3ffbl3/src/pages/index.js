@@ -28,6 +28,7 @@ const IndexPage = () => (
 	<>
 		<GlobalStyle />
 		<StyledWrapper>
+			<MainHeader>Junior</MainHeader>
 			<MainHeader>Full Stack Developer</MainHeader>
 			<Menu>
 				<LogoHeader>1n3ffbl3</LogoHeader>
