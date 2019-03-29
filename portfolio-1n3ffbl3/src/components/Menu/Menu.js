@@ -10,7 +10,6 @@ const Menu = styled.div`
 	min-height: unset;
 	align-items: baseline;
 	border-top: 1px solid rgba(255, 255, 255, 0.3);
-	width: 90vw;
 	margin-top: 40px;
 `;
 
