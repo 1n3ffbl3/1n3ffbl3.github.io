@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-import { Link } from "gatsby";
-import backgroundImage from "../images/background.jpg";
+import Header from '../components/Header/Header';
+import Navigation from '../components/Navigation/Navigation';
+import backgroundImage from '../images/backgroundImage.jpg';
 
 const GlobalStyle = createGlobalStyle`
 	body {
@@ -14,7 +15,11 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const StyledWrapper = styled.div`
-	width: 100 %;
+	display: flex;
+	flex-direcrtion: column;
+	justify-content: center;
+	padding: 20vh;
+	width: 100%;
 	height: 100vh;
 	background-image: url(${backgroundImage});
 	background-size: cover;
@@ -25,7 +30,8 @@ const IndexPage = () => (
 	<>
 		<GlobalStyle />
 		<StyledWrapper>
-			<Link to="/secondpage">Idź do second page</Link>
+			<Header>1n3ffbl3</Header>
+			<Navigation />
 		</StyledWrapper>
 	</>
 )
