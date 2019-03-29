@@ -1,9 +1,9 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
-import Header from '../components/Header/Header';
+import LogoHeader from '../components/Header/LogoHeader';
 import MainHeader from '../components/Header/MainHeader';
 import Navigation from '../components/Navigation/Navigation';
-import NavigationBorder from '../components/Navigation/NavigationBorder';
+import Menu from '../components/Menu/Menu';
 import backgroundImage from '../images/backgroundImage.jpg';
 
 const GlobalStyle = createGlobalStyle`
@@ -29,10 +29,10 @@ const IndexPage = () => (
 		<GlobalStyle />
 		<StyledWrapper>
 			<MainHeader>Full Stack Developer</MainHeader>
-			<NavigationBorder>
-				<Header>1n3ffbl3</Header>
+			<Menu>
+				<LogoHeader>1n3ffbl3</LogoHeader>
 				<Navigation />
-			</NavigationBorder>
+			</Menu>
 		</StyledWrapper>
 	</>
 )
