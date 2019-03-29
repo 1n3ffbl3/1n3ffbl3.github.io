@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 
 const NavigationWrapper = styled.ul`
 	padding: 0;
@@ -8,15 +7,15 @@ const NavigationWrapper = styled.ul`
 	font-family: 'Montserrat';
 	color: white;
 	font-weight: 500;
+	flex: 1 1 80%;
+	max-width: 80%;
 	display: flex;
-	flex-shrink: 2;
-	flex-grow: 1;
+	flex-direction: row;
+	align-items: center;
+	place-content: center space-evenly;
 `;
 
 const NavigationItem = styled.li`
-	margin-right: 100px;
-	position: relative;
-	justify-content: space-around;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 `;

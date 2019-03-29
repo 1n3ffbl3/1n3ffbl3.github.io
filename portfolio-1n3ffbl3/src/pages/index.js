@@ -17,8 +17,6 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const StyledWrapper = styled.div`
-	display: flex;
-	flex-flow: row wrap;
 	padding: 40px 60px 20px 60px;
 	width: 100%;
 	height: 100vh;
