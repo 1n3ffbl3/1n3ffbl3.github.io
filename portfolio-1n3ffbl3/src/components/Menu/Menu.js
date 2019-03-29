@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
-const NavigationBorder = styled.div`
+const Menu = styled.div`
 	width: 90vw;
 	display: flex;
 	flex-direction: row;
 `;
 
-export default NavigationBorder;
+export default Menu;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Header = styled.h1`
+const LogoHeader = styled.h1`
 	font-size: 1em;
 	font-family: 'Montserrat';
 	color: white;
@@ -9,4 +9,4 @@ const Header = styled.h1`
 	flex: 1 1 100%;
 `;
 
-export default Header;
+export default LogoHeader;
