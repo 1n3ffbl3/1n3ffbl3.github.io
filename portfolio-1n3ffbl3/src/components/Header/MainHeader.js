@@ -9,13 +9,6 @@ const MainHeader = styled.h1`
 	color: white;
 	text-align: center;
 	position: relative;
-	width: 100%;
-	height: 60px;
-	max-height: 100%;
-	min-height: unset;
-	align-items: baseline;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-	width: 90vw;
 `;
 
 export default MainHeader;
