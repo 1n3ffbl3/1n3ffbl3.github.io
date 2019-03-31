@@ -6,4 +6,8 @@ const NotFoundPage = () => (
 	</>
 )
 
-export default NotFoundPage
+NotFoundPage.defaultProps = {
+	theme: {},
+}
+
+export default NotFoundPage;
