@@ -15,10 +15,10 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const StyledWrapper = styled.div`
-	padding: 40px 60px 20px 60px;
+	padding: 0;
 	width: 100%;
 	height: 100vh;
-	background-image: url(${backgroundImage});
+	background-color: black;
 	background-size: cover;
 `;
 
