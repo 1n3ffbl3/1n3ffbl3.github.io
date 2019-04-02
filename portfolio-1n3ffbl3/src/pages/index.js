@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../layout/Layout';
 import MenuWrapper from '../components/Menu/MenuWrapper';
 import AboutMe from '../components/AboutMe/AboutMe';
-import Projects from '../components/Projects/Projects';
+import ProjectWrapper from '../components/Projects/ProjectWrapper';
 
 const IndexPage = ({ children }) => (
 	<Layout>
@@ -12,9 +12,9 @@ const IndexPage = ({ children }) => (
 		<AboutMe>
 			{children}
 		</AboutMe>
-		<Projects>
+		<ProjectWrapper>
 			{children}
-		</Projects>
+		</ProjectWrapper>
 	</Layout>
 );
 

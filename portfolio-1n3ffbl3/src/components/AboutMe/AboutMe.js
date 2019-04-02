@@ -4,6 +4,8 @@ import pictureMe from '../../images/pictureMe.jpg';
 
 
 const AboutMeWrapper = styled.div`
+	display: flex;
+	flex-direction: row;
 	padding: 40px 60px 20px 60px;
 	width: 100%;
 	height: 50vh;
@@ -12,17 +14,23 @@ const AboutMeWrapper = styled.div`
 	background-repeat: no-repeat;
 `;
 
+const ImageWrapper = styled.div`
+	width: 50%;
+	padding: 20px 10px 20px 10px;
+`;
+
 const Image = styled.img`
- 	border-radius: 50%;
-    max-width: 50%;
-    max-height: 50%;
-    padding-top: 20px; 
-    padding: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-	margin: -70px 0 0 -170px;
-	backgroundImage: url(${pictureMe});
+	max-width: 100%;
+	// height: auto;
+	border-radius: 50%;
+	// padding-top: 20px; 
+    // padding: 20px;
+	content: url(${pictureMe});
+`;
+
+const TextWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
 `;
 
 const H4 = styled.h4`
@@ -54,18 +62,22 @@ const AboutMeText = styled.p`
 
 const AboutMe = () => (
 	<AboutMeWrapper>
-		<Image></Image>
-		<H4>About me</H4>
-		<AboutMeText>My name is Marta. Nearly a year ago, I finished Elewa Academy
-						Full Stack Web Development bootcamp.
-						Since then, I have successfully finished my first internship and afterwards continued with
-						first Junior Full Stack JavaScript developer job.
-						My goal, from the very beginning, is to become an awesome Front End developer. Every day I am
-						continuously improving my knowledge of Front End
-						technologies, to become the best in the market. At previous company I was working with Vue.js,
-						also thanks to previous experience with React.js,
-						I am looking for a new challenge as a Junior Full Stack JavaScript Developer.
+		<ImageWrapper>
+			<Image />
+		</ImageWrapper>
+		<TextWrapper>
+			<H4>About me</H4>
+			<AboutMeText>My name is Marta. Nearly a year ago, I finished Elewa Academy
+							Full Stack Web Development bootcamp.
+							Since then, I have successfully finished my first internship and afterwards continued with
+							first Junior Full Stack JavaScript developer job.
+							My goal, from the very beginning, is to become an awesome Front End developer. Every day I am
+							continuously improving my knowledge of Front End
+							technologies, to become the best in the market. At previous company I was working with Vue.js,
+							also thanks to previous experience with React.js,
+							I am looking for a new challenge as a Junior Full Stack JavaScript Developer.
 		</AboutMeText>
+		</TextWrapper>
 	</AboutMeWrapper>
 );
 

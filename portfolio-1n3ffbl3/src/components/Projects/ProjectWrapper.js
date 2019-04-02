@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Card from './Card/CardWrapper';
 
 
 const ProjectsWrapper = styled.div`
@@ -10,10 +11,11 @@ const ProjectsWrapper = styled.div`
 	background-size: cover;
 	background-repeat: no-repeat;
 `;
-const Projects = () => (
+const ProjectWrapper = ({ children }) => (
 	<ProjectsWrapper>
 		Projects
+	<Card>{children}</Card>
 	</ProjectsWrapper>
 );
 
-export default Projects;
+export default ProjectWrapper;
