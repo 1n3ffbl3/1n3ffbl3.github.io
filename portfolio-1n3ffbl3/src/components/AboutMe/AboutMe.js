@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import pictureMe from '../../images/pictureMe.jpg';
+import pictureMe from '../../images/pictureMe_black_and_white.jpg';
 
 
 const AboutMeWrapper = styled.div`
@@ -21,10 +21,7 @@ const ImageWrapper = styled.div`
 
 const Image = styled.img`
 	max-width: 100%;
-	// height: auto;
 	border-radius: 50%;
-	// padding-top: 20px; 
-    // padding: 20px;
 	content: url(${pictureMe});
 `;
 
@@ -37,12 +34,13 @@ const H4 = styled.h4`
     background: transparent;
     color: #000;
     text-align: center;
-    margin-top: 70px;
-    margin-bottom:20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
     padding: 40px;
     padding-top: 10px;
-    font-family: 'Lora', 'Arial Black', serif;
-    font-weight: normal;
+   	font-family: 'Montserrat', sans-serif;
+	font-weight: 500px;
+	font-size: 22px;
     text-align: center; 
 `;
 
@@ -52,11 +50,12 @@ const AboutMeText = styled.p`
     text-align: center;
     margin-bottom: 70px;
     padding: 40px;
-    padding-right: 5px;
-    padding-left: 5px;
-    padding-top: 10px;
-    font-family: 'Lora', 'Arial Black', serif;
-    font-weight: normal;
+    padding-right: 150px;
+    padding-left: 150px;
+    padding-top: 8px;
+   	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	line-height: 1.6;
     text-align: center;
 `;
 
