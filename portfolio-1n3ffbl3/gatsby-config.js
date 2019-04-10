@@ -29,14 +29,6 @@ module.exports = {
 				display: `minimal-ui`,
 				// This path is relative to the root of the site.
 			},
-			
-		},
-		{ 
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				name: `sponsors`,
-				path: `${__dirname}/src/assets/sponsors`
-			}
 		},
 
 		// this (optional) plugin enables Progressive Web App + Offline functionality

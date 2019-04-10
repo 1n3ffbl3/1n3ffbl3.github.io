@@ -6,39 +6,54 @@ import CardLink from './CardLink';
 import CardText from './CardText';
 import CardTitle from './CardTitle';
 import Img from 'gatsby-image';
-import girlWithPearl from '../../../assets/images/girlWithPearl.jpg';
-import spacer from '../../../assets/images/heroimage2.jpg';
+import girlWithPearl from '../../../images/girlWithPearl.jpg';
+import spacer from '../../../images/heroimage2.jpg';
 
 const CardWrapper = styled.div`
-	padding: 50px;
+	padding: 20px;
 	font-weight: lighter;
     box-shadow: 10px 10px 87px -13px rgba(0,0,0,0.75);
     width: 20rem; 
 	height: 35em;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 `;
 
-const images = [
-	girlWithPearl,
-	spacer
-]
+const ImageWrapper = styled.div`
+	width: 100%;
+	height: 17rem;
+`;
 
-const Card = () => (
-	<CardWrapper>
-		{images.map((image, i) => (
-			<Img
-				key={i}
-				content= {image}
-			/>
-		))}
-		{/* <CardImage></CardImage> */}
-		<CardBody>
-			<CardTitle>First project</CardTitle>
-			<CardText></CardText>
-			<CardLink></CardLink>
-		</CardBody>
-	</CardWrapper>
-);
+const Image = styled.img`
+	width: 100%;
+	height: 100%;
+	content: url(${girlWithPearl});
+`;
 
-export default Card;
+
+export default class Card extends React.Component {
+	state = {
+		images: [
+			girlWithPearl,
+			spacer
+		],
+	}
+
+	render() {
+
+		return (
+			<CardWrapper>
+				<ImageWrapper>
+					<Image
+					/>
+				</ImageWrapper>
+				{/* <CardImage></CardImage> */}
+				<CardBody>
+					<CardTitle>First project</CardTitle>
+					<CardText></CardText>
+					<CardLink></CardLink>
+				</CardBody>
+			</CardWrapper>
+		)
+	}
+}
