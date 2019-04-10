@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Menu from './Menu';
 import LogoHeader from '../Header/LogoHeader';
 import MainHeader from '../Header/MainHeader';
-import backgroundImage from '../../images/backgroundImage.jpg';
+import backgroundImage from '../../assets/images/backgroundImage.jpg';
 import Navigation from '../Navigation/Navigation';
 
 const BackgroundImageWrapper = styled.div`
