@@ -27,7 +27,7 @@ const DivClass = styled.div`
 const CardWrapper = styled.div`
 	padding: 20px;
 	font-weight: lighter;
-    box-shadow: 10px 10px 87px -13px rgba(0,0,0,0.75);
+	box-shadow: 0 20px 40px -5px rgba(0,0,0,.3);
     width: 20rem; 
 	height: 35em;
 	display: flex;
@@ -110,7 +110,7 @@ export default class ProjectWrapper extends React.Component {
 						<DivClass>
 							<CardWrapper>
 								<ImageWrapper>
-									<Image/>
+									<Image />
 								</ImageWrapper>
 								<CardBody>
 									<CardTitle>{project.title}</CardTitle>
