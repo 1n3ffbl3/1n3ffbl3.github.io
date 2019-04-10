@@ -45,57 +45,83 @@ const Image = styled.img`
 	content: url(${girlWithPearl});
 `;
 
+const H4 = styled.h4`
+    background: transparent;
+    color: #000;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding: 40px;
+    padding-top: 10px;
+   	font-family: 'Montserrat', sans-serif;
+	font-weight: 500px;
+	font-size: 22px;
+    text-align: center; 
+`;
+
+const CardLinkWrapper= styled.div`
+	display: flex;
+	flex-direction: row;
+`;
+
 export default class ProjectWrapper extends React.Component {
 	state = {
-		images: [
-			girlWithPearl,
-			spacer
-		],
-		projectTitles: [
-			"First Title",
-			"Second Title",
-			"Third Title",
-			"Fourth Title",
-			"Fifth Title",
-			"Sixth Title",
-			"Seventh Title",
-			"Eighth Title",
-		],
 		projects: [
 			{
 				image: peopleHeart,
 				title: "Application People 4People",
-				text: "Application which is designed to provide an easier way of communication between people and organizations who want to help others."
+				text: "Application which is designed to provide an easier way of communication between people and organizations who want to help others.",
+				codeLink: "https://github.com/Mariana88/MandM-FinalProject",
+				demoLink: "https://1n3ffbl3.github.io/MyFirstApplication/"
 			},
 			{
 				image: girlWithPearl,
 				title: "Tribute Page",
-				text: "Tribute page about my favourite writer Tracy Chevalier."
+				text: "Tribute page about my favourite writer Tracy Chevalier.",
+				codeLink: "https://github.com/1n3ffbl3/tribute",
+				demoLink: "https://1n3ffbl3.github.io/tribute"
 			},
 			{
 				image: tictactoe,
 				title: "Tictactoe game",
-				text: "Implementation in JavaScript."
+				text: "Implementation in JavaScript.",
+				codeLink: "https://github.com/1n3ffbl3/studying-with-specs",
+				demoLink: "https://1n3ffbl3.github.io/studying-with-specs/"
 			},
 			{
 				image: codewars,
-				title: "Codewars Solution Repository",
-				text: "Set of solutions for codewars challenges."
+				title: "Codewars Repository",
+				text: "Set of solutions for codewars challenges.",
+				codeLink: "https://github.com/1n3ffbl3/Codewars_gallery",
+				demoLink: "https://1n3ffbl3.github.io/Codewars_gallery/"
 			},
 			{
 				image: computer,
 				title: "The Programmer's Oath",
-				text: "Created in github pages."
+				text: "Created in github pages.",
+				codeLink: "https://github.com/1n3ffbl3/programmers-oath-template",
+				demoLink: "https://1n3ffbl3.github.io/programmers-oath-template/"
 			},
 			{
 				image: phoneBook,
 				title: "Phone Book application",
-				text: "Created using React.js and Node.js with use of PostgresDb. This is example of Phone book dictionary."
+				text: "Created using React.js and Node.js with use of PostgresDb. This is example of Phone book dictionary.",
+				codeLink: "https://github.com/1n3ffbl3/Phone-Book-App",
+				demoLink: ""
 			},
 			{
 				image: heroImage,
 				title: "Spacer application",
-				text: "Application written in Vue.js. Thanks to this application you can search for a NASA photos by typing a space related expression."
+				text: "Application written in Vue.js. Thanks to this application you can search for a NASA photos by typing a space related expression.",
+				codeLink: "https://github.com/1n3ffbl3/spacer-hellomarta",
+				demoLink: "https://1n3ffbl3.github.io/spacer-hellomarta/"
+			},
+			{
+				image: heroImage,
+				title: "Save time list application",
+				text: "",
+				codeLink: "",
+				demoLink: ""
 			},
 		]
 	}
@@ -103,56 +129,32 @@ export default class ProjectWrapper extends React.Component {
 	render() {
 
 		return (
+			<>
+				<H4>Check out my projects</H4>
+				<ProjectsWrapper>
 
-			<ProjectsWrapper>
-				{
-					this.state.projects.map(project => (
-						<DivClass>
-							<CardWrapper>
-								<ImageWrapper>
-									<Image />
-								</ImageWrapper>
-								<CardBody>
-									<CardTitle>{project.title}</CardTitle>
-									<CardText>{project.text}</CardText>
-									<CardLink></CardLink>
-								</CardBody>
-							</CardWrapper>
-						</DivClass>
-					))
-				}
-			</ProjectsWrapper>
+					{
+						this.state.projects.map(project => (
+							<DivClass>
+								<CardWrapper>
+									<ImageWrapper>
+										<Image />
+									</ImageWrapper>
+									<CardBody>
+										<CardTitle>{project.title}</CardTitle>
+										<CardText>{project.text}</CardText>
+										<CardLinkWrapper>
+											<CardLink href={project.codeLink}>Code</CardLink>
+											<CardLink href={project.demoLink}>Demo</CardLink>
+										</CardLinkWrapper>
+
+									</CardBody>
+								</CardWrapper>
+							</DivClass>
+						))
+					}
+				</ProjectsWrapper>
+			</>
 		)
 	}
-}
-
-// = ({ children }) => (
-// 	<ProjectsWrapper>
-// 		{/* Projects */}
-// 		<DivClass >
-// 			<Card>{children}</Card>
-// 		</DivClass>
-// 		<DivClass>
-// 			<Card>{children}</Card>
-// 		</DivClass>
-// 		<DivClass>
-// 			<Card>{children}</Card>
-// 		</DivClass>
-// 		<DivClass>
-// 			<Card>{children}</Card>
-// 		</DivClass>
-// 		<DivClass>
-// 			<Card>{children}</Card>
-// 		</DivClass>
-// 		<DivClass>
-// 			<Card>{children}</Card>
-// 		</DivClass>
-// 		<DivClass >
-// 			<Card>{children}</Card>
-// 		</DivClass>
-// 		<DivClass >
-// 			<Card>{children}</Card>
-// 		</DivClass>
-// 	</ProjectsWrapper>
-// );
-
+};
