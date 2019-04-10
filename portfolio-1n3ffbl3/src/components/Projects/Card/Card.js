@@ -5,6 +5,9 @@ import CardImage from './CardImage';
 import CardLink from './CardLink';
 import CardText from './CardText';
 import CardTitle from './CardTitle';
+import Img from 'gatsby-image';
+import girlWithPearl from '../../../assets/images/girlWithPearl.jpg';
+import spacer from '../../../assets/images/heroimage2.jpg';
 
 const CardWrapper = styled.div`
 	padding: 50px;
@@ -16,10 +19,20 @@ const CardWrapper = styled.div`
 	flex-direction: row;
 `;
 
+const images = [
+	girlWithPearl,
+	spacer
+]
 
 const Card = () => (
 	<CardWrapper>
-		<CardImage></CardImage>
+		{images.map((image, i) => (
+			<Img
+				key={i}
+				content= {image}
+			/>
+		))}
+		{/* <CardImage></CardImage> */}
 		<CardBody>
 			<CardTitle>First project</CardTitle>
 			<CardText></CardText>
