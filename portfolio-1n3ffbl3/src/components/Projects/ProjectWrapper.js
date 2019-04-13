@@ -14,6 +14,7 @@ import CardTitle from './Card/CardTitle';
 import CardText from './Card/CardText';
 import CardLink from './Card/CardLink';
 import CardImage from './Card/CardImage';
+import { ScrollTo, ScrollArea } from "react-scroll-to";
 
 const ProjectsWrapper = styled.div`
 	display: flex;
@@ -121,24 +122,33 @@ export default class ProjectWrapper extends React.Component {
 		return (
 			<>
 				<H4>Check out my projects</H4>
-				<ProjectsWrapper>
-					{
-						this.state.projects.map(project => (
-							<CardWrapper>
-								<CardImage url={project.image}>
-								</CardImage>
-								<CardBody>
-									<CardTitle>{project.title}</CardTitle>
-									<CardText>{project.text}</CardText>
-									<CardLinkWrapper>
-										<CardLink href={project.codeLink}>Code</CardLink>
-										<CardLink href={project.demoLink}>Demo</CardLink>
-									</CardLinkWrapper>
-								</CardBody>
-							</CardWrapper>
-						))
-					}
-				</ProjectsWrapper>
+				<ScrollTo>
+					{({ scrollTo }) => (
+						<>
+							<ProjectsWrapper>
+								{
+									this.state.projects.map((project, index) => (
+										<ScrollArea id={'project' + index}>
+											<button onClick={() => scrollTo({ id: 'project6', y: 500 })}>Test</button>
+											<CardWrapper key={index}>
+												<CardImage url={project.image}>
+												</CardImage>
+												<CardBody>
+													<CardTitle>{project.title}</CardTitle>
+													<CardText>{project.text}</CardText>
+													<CardLinkWrapper>
+														<CardLink href={project.codeLink}>Code</CardLink>
+														<CardLink href={project.demoLink}>Demo</CardLink>
+													</CardLinkWrapper>
+												</CardBody>
+											</CardWrapper>
+										</ScrollArea>
+									))
+								}
+							</ProjectsWrapper>
+						</>
+					)}
+				</ScrollTo>
 			</>
 		)
 	}

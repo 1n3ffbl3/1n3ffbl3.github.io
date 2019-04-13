@@ -4,12 +4,14 @@ import MenuWrapper from '../components/Menu/MenuWrapper';
 import AboutMe from '../components/AboutMe/AboutMe';
 import ProjectWrapper from '../components/Projects/ProjectWrapper';
 import FooterWrapper from '../components/Footer/FooterWrapper';
+
+
 const IndexPage = ({ children }) => (
 	<Layout>
 		<MenuWrapper>
 			{children}
 		</MenuWrapper>
-		<AboutMe>
+		<AboutMe id="about_me">
 			{children}
 		</AboutMe>
 		<ProjectWrapper>

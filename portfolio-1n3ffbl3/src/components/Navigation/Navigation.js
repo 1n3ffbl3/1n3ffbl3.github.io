@@ -23,7 +23,7 @@ const NavigationItem = styled.li`
 
 const Navigation = () => (
 	<NavigationWrapper>
-		<NavigationItem>About me</NavigationItem>
+		<NavigationItem id="niAboutMe">About me</NavigationItem>
 		<NavigationItem>Projects</NavigationItem>
 		<NavigationItem>Contact</NavigationItem>
 	</NavigationWrapper>
