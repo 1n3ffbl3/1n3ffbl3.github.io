@@ -3,7 +3,7 @@ import Layout from '../layout/Layout';
 import MenuWrapper from '../components/Menu/MenuWrapper';
 import AboutMe from '../components/AboutMe/AboutMe';
 import ProjectWrapper from '../components/Projects/ProjectWrapper';
-
+import FooterWrapper from '../components/Footer/FooterWrapper';
 const IndexPage = ({ children }) => (
 	<Layout>
 		<MenuWrapper>
@@ -15,6 +15,9 @@ const IndexPage = ({ children }) => (
 		<ProjectWrapper>
 			{children}
 		</ProjectWrapper>
+		<FooterWrapper>
+			{children}
+		</FooterWrapper>
 	</Layout>
 );
 

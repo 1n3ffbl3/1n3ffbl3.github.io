@@ -1,27 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
 import girlWithPearl from '../../images/girlWithPearl.jpg';
-import spacer from '../../images/heroimage2.jpg';
+import spacer from '../../images/spacerImage.jpg';
 import peopleHeart from '../../images/people_heart_shadow.jpg';
 import tictactoe from '../../images/tictactoe.jpg';
 import codewars from '../../images/codewars5.jpg';
 import computer from '../../images/computer.jpg';
 import phoneBook from '../../images/phone-book.jpg';
 import heroImage from '../../images/heroimage2.jpg';
+import saveTimeList from '../../images/saveTimeList.jpg';
 import CardBody from './Card/CardBody';
 import CardTitle from './Card/CardTitle';
 import CardText from './Card/CardText';
 import CardLink from './Card/CardLink';
+import CardImage from './Card/CardImage';
 
 const ProjectsWrapper = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	padding: 40px 60px 20px 60px;
-`;
-
-const DivClass = styled.div`
-	flex: 1 0 21%; 
-	margin: 50px;
+	flex-grow: 1;
+	box-sizing: border-box;
+    place-content: center space-evenly;
+    align-items: center;
 `;
 
 const CardWrapper = styled.div`
@@ -32,17 +33,7 @@ const CardWrapper = styled.div`
 	height: 35em;
 	display: flex;
 	flex-direction: column;
-`;
-
-const ImageWrapper = styled.div`
-	width: 100%;
-	height: 17rem;
-`;
-
-const Image = styled.img`
-	width: 100%;
-	height: 100%;
-	content: url(${girlWithPearl});
+	margin: 50px;
 `;
 
 const H4 = styled.h4`
@@ -59,7 +50,7 @@ const H4 = styled.h4`
     text-align: center; 
 `;
 
-const CardLinkWrapper= styled.div`
+const CardLinkWrapper = styled.div`
 	display: flex;
 	flex-direction: row;
 `;
@@ -110,14 +101,14 @@ export default class ProjectWrapper extends React.Component {
 				demoLink: ""
 			},
 			{
-				image: heroImage,
+				image: spacer,
 				title: "Spacer application",
 				text: "Application written in Vue.js. Thanks to this application you can search for a NASA photos by typing a space related expression.",
 				codeLink: "https://github.com/1n3ffbl3/spacer-hellomarta",
 				demoLink: "https://1n3ffbl3.github.io/spacer-hellomarta/"
 			},
 			{
-				image: heroImage,
+				image: saveTimeList,
 				title: "Save time list application",
 				text: "",
 				codeLink: "",
@@ -127,30 +118,24 @@ export default class ProjectWrapper extends React.Component {
 	}
 
 	render() {
-
 		return (
 			<>
 				<H4>Check out my projects</H4>
 				<ProjectsWrapper>
-
 					{
 						this.state.projects.map(project => (
-							<DivClass>
-								<CardWrapper>
-									<ImageWrapper>
-										<Image />
-									</ImageWrapper>
-									<CardBody>
-										<CardTitle>{project.title}</CardTitle>
-										<CardText>{project.text}</CardText>
-										<CardLinkWrapper>
-											<CardLink href={project.codeLink}>Code</CardLink>
-											<CardLink href={project.demoLink}>Demo</CardLink>
-										</CardLinkWrapper>
-
-									</CardBody>
-								</CardWrapper>
-							</DivClass>
+							<CardWrapper>
+								<CardImage url={project.image}>
+								</CardImage>
+								<CardBody>
+									<CardTitle>{project.title}</CardTitle>
+									<CardText>{project.text}</CardText>
+									<CardLinkWrapper>
+										<CardLink href={project.codeLink}>Code</CardLink>
+										<CardLink href={project.demoLink}>Demo</CardLink>
+									</CardLinkWrapper>
+								</CardBody>
+							</CardWrapper>
 						))
 					}
 				</ProjectsWrapper>
