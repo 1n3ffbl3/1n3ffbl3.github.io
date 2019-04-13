@@ -56,7 +56,7 @@ const AboutMeText = styled.p`
    	font-family: 'Montserrat', sans-serif;
 	font-weight: normal;
 	line-height: 1.6;
-    text-align: center;
+	text-align: center;
 `;
 
 const AboutMe = () => (
