@@ -70,7 +70,7 @@ export default function HTML(props) {
 							}, 1000);
 						});
 					}
-					setTimeout(addScrollEvents, 5000)	
+					setTimeout(addScrollEvents, 1500)	
 				});`
 			}}>
 			</script>

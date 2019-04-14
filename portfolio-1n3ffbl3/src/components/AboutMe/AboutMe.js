@@ -6,9 +6,9 @@ import pictureMe from '../../images/pictureMe_black_and_white.jpg';
 const AboutMeWrapper = styled.div`
 	display: flex;
 	flex-direction: row;
-	padding: 40px 60px 20px 60px;
+	padding: 250px 60px 20px 60px;
 	width: 100%;
-	height: 50vh;
+	height: 100vh;
 	background-color: white;
 	background-size: cover;
 	background-repeat: no-repeat;

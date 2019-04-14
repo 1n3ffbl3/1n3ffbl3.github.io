@@ -16,9 +16,7 @@ const FooterLink = styled.a`
 const LinksWrapper = styled.div`
 	display: flex;
 	flex-direction: row;
-	padding: 40px 60px 20px 60px;
 	justify-content: center;
-
 `;
 
 const FooterLinkWrapper = () => (
