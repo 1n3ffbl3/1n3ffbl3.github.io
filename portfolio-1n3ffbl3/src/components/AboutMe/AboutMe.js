@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import pictureMe from '../../images/pictureMe_black_and_white.jpg';
 
-
 const AboutMeWrapper = styled.div`
 	display: flex;
 	flex-direction: row;
