@@ -3,9 +3,9 @@ import styled from 'styled-components';
 import Menu from './Menu';
 import LogoHeader from '../Header/LogoHeader';
 import MainHeader from '../Header/MainHeader';
+import HeaderWrapper from '../Header/HeaderWrapper';
 import backgroundImage from '../../images/backgroundImage.jpg';
 import Navigation from '../Navigation/Navigation';
-// import styles from './Arrow.module.scss';
 
 const BackgroundImageWrapper = styled.div`
 	padding: 40px 60px 20px 60px;
@@ -21,8 +21,12 @@ export default class MenuWrapper extends React.Component {
 	render() {
 		return (
 			<BackgroundImageWrapper>
-				<MainHeader>Junior</MainHeader>
-				<MainHeader>Full Stack Developer</MainHeader>
+				<HeaderWrapper>
+					<MainHeader>
+						Junior Full Stack <br />
+						JavaScript Developer
+					</MainHeader>
+				</HeaderWrapper>
 				<Menu id="navbar">
 					<LogoHeader>1n3ffbl3</LogoHeader>
 					<Navigation />

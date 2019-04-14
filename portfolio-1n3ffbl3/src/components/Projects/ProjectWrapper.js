@@ -43,7 +43,7 @@ const H4 = styled.h4`
     margin-top: 10px;
     margin-bottom: 5px;
     padding: 40px;
-    padding-top: 10px;
+    padding-top: 60px;
    	font-family: 'Montserrat', sans-serif;
 	font-weight: 500px;
 	font-size: 22px;
@@ -110,9 +110,9 @@ export default class ProjectWrapper extends React.Component {
 			{
 				image: saveTimeList,
 				title: "Save time list application",
-				text: "",
-				codeLink: "",
-				demoLink: ""
+				text: "This React application helps you to organize things. It allows you to create three lists : list of recipes, check-out list and things to see during lifetime.",
+				codeLink: "https://github.com/1n3ffbl3/Save-Time-List",
+				demoLink: "https://1n3ffbl3.github.io/Save-Time-List/"
 			},
 		]
 	}
@@ -120,8 +120,8 @@ export default class ProjectWrapper extends React.Component {
 	render() {
 		return (
 			<>
-				<H4>Check out my projects</H4>
-				<ProjectsWrapper id="projects" className="content">
+				<H4 id="projects">Check out my projects</H4>
+				<ProjectsWrapper className="content">
 					{
 						this.state.projects.map((project, index) => (
 
@@ -132,8 +132,8 @@ export default class ProjectWrapper extends React.Component {
 									<CardTitle>{project.title}</CardTitle>
 									<CardText>{project.text}</CardText>
 									<CardLinkWrapper>
-										<CardLink href={project.codeLink}>Code</CardLink>
-										<CardLink href={project.demoLink}>Demo</CardLink>
+										<CardLink href={project.codeLink} target="_blank">Code</CardLink>
+										<CardLink href={project.demoLink} target="_blank">Demo</CardLink>
 									</CardLinkWrapper>
 								</CardBody>
 							</CardWrapper>

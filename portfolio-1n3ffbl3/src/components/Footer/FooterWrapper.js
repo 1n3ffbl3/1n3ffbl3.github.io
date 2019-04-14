@@ -6,8 +6,6 @@ import { FaFacebookF } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
 
-
-
 const FooterImageWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
