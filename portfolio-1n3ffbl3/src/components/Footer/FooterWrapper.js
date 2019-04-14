@@ -1,10 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import FooterLinkWrapper from './FooterLink';
-import { FaInstagram } from 'react-icons/fa';
-import { FaFacebookF } from 'react-icons/fa';
-import { FaLinkedinIn } from 'react-icons/fa';
-import { FaEnvelope } from 'react-icons/fa';
 
 const FooterImageWrapper = styled.div`
 	display: flex;

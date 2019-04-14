@@ -16,13 +16,4 @@ const CardLink = styled.a`
 
 `;
 
-
-// .secondary {
-// 	@extend.button;
-
-// 	background - color: #1E58FF;
-// 	color: white;
-// }
-
-
 export default CardLink;

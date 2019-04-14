@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
-import backgroundImage from '../images/backgroundImage.jpg';
 import { theme } from '../utils/theme';
 
 

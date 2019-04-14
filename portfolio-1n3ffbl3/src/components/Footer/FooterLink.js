@@ -36,5 +36,4 @@ const FooterLinkWrapper = () => (
 	</LinksWrapper>
 )
 
-
 export default FooterLinkWrapper;

@@ -7,7 +7,6 @@ import tictactoe from '../../images/tictactoe.jpg';
 import codewars from '../../images/codewars5.jpg';
 import computer from '../../images/computer.jpg';
 import phoneBook from '../../images/phone-book.jpg';
-import heroImage from '../../images/heroimage2.jpg';
 import saveTimeList from '../../images/saveTimeList.jpg';
 import CardBody from './Card/CardBody';
 import CardTitle from './Card/CardTitle';
