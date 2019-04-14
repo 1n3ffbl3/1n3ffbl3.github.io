@@ -60,7 +60,7 @@ const AboutMeText = styled.p`
 `;
 
 const AboutMe = () => (
-	<AboutMeWrapper>
+	<AboutMeWrapper id="aboutMe">
 		<ImageWrapper>
 			<Image />
 		</ImageWrapper>

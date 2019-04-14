@@ -11,7 +11,7 @@ const IndexPage = ({ children }) => (
 		<MenuWrapper>
 			{children}
 		</MenuWrapper>
-		<AboutMe id="about_me">
+		<AboutMe>
 			{children}
 		</AboutMe>
 		<ProjectWrapper>
