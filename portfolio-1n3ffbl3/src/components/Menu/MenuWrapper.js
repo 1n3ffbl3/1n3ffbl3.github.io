@@ -5,6 +5,7 @@ import LogoHeader from '../Header/LogoHeader';
 import MainHeader from '../Header/MainHeader';
 import backgroundImage from '../../images/backgroundImage.jpg';
 import Navigation from '../Navigation/Navigation';
+// import styles from './Arrow.module.scss';
 
 const BackgroundImageWrapper = styled.div`
 	padding: 40px 60px 20px 60px;
@@ -13,18 +14,20 @@ const BackgroundImageWrapper = styled.div`
 	background-image: url(${backgroundImage});
 	background-size: cover;
 	background-repeat: no-repeat;
+	color: white;
 `;
 
-const MenuWrapper = () => (
-	<BackgroundImageWrapper>
-		<MainHeader>Junior</MainHeader>
-		<MainHeader>Full Stack Developer</MainHeader>
-		<Menu>
-			<LogoHeader>1n3ffbl3</LogoHeader>
-			<Navigation />
-		</Menu>
-	</ BackgroundImageWrapper>
-
-);
-
-export default MenuWrapper;
+export default class MenuWrapper extends React.Component {
+	render() {
+		return (
+			<BackgroundImageWrapper>
+				<MainHeader>Junior</MainHeader>
+				<MainHeader>Full Stack Developer</MainHeader>
+				<Menu id="navbar">
+					<LogoHeader>1n3ffbl3</LogoHeader>
+					<Navigation />
+				</Menu>
+			</ BackgroundImageWrapper >
+		)
+	}
+};

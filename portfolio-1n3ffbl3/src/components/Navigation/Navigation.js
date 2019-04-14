@@ -5,7 +5,6 @@ const NavigationWrapper = styled.ul`
 	padding: 0;
 	list-style: none;
 	font-family: 'Montserrat';
-	color: white;
 	font-weight: 500;
 	flex: 1 1 80%;
 	max-width: 80%;
@@ -23,9 +22,9 @@ const NavigationItem = styled.li`
 
 const Navigation = () => (
 	<NavigationWrapper>
-		<NavigationItem id="niAboutMe">About me</NavigationItem>
-		<NavigationItem>Projects</NavigationItem>
-		<NavigationItem>Contact</NavigationItem>
+		<NavigationItem id="navAboutMe">About me</NavigationItem>
+		<NavigationItem id="navProjects">Projects</NavigationItem>
+		<NavigationItem id="navContact">Contact</NavigationItem>
 	</NavigationWrapper>
 );
 

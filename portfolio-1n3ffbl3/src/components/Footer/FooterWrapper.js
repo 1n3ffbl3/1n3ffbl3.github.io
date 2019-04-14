@@ -29,7 +29,7 @@ const H6 = styled.h6`
 
 
 const FooterWrapper = () => (
-	<FooterImageWrapper>
+	<FooterImageWrapper id="contact">
 		<FooterLinkWrapper />
 		<H6>Copyright © 2019</H6>
 	</ FooterImageWrapper >

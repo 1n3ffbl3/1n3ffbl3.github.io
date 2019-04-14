@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import $ from 'jquery'
 
 export default function HTML(props) {
 	return (
@@ -11,6 +10,11 @@ export default function HTML(props) {
 				<meta
 					name="viewport"
 					content="width=device-width, initial-scale=1, shrink-to-fit=no"
+				/>
+				<script
+					src="https://code.jquery.com/jquery-3.3.1.min.js"
+					integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+					crossOrigin="anonymous"
 				/>
 				{props.headComponents}
 			</head>
@@ -26,6 +30,50 @@ export default function HTML(props) {
 				/>
 				{props.postBodyComponents}
 			</body>
+			<script dangerouslySetInnerHTML={{
+				__html: `
+				function addFloatingMenu() {
+					navbar = document.getElementById("navbar")
+					aboutMe = document.getElementById("aboutMe")
+					if (navbar && aboutMe) {
+						sticky = aboutMe.offsetTop
+						if (window.pageYOffset >= sticky) {
+							navbar.classList.add("floatmenu")
+							navbar.classList.add("sticky")
+						} else {
+							navbar.classList.remove("floatmenu")
+							navbar.classList.remove("sticky")
+						}
+					}
+				}
+				window.onscroll = function () { addFloatingMenu() }`
+			}}>
+			</script>
+			<script dangerouslySetInnerHTML={{
+				__html: `
+				$(document).ready(function () {
+					var ni = $("#niAboutMe")
+					function addScrollEvents() {
+						$("#navAboutMe").click(function () {
+							$('html, body').animate({
+								scrollTop: $("#aboutMe").offset().top
+							}, 1000);
+						});
+						$("#navContact").click(function () {
+							$('html, body').animate({
+								scrollTop: $("#contact").offset().top
+							}, 1000);
+						});
+						$("#navProjects").click(function () {
+							$('html, body').animate({
+								scrollTop: $("#projects").offset().top
+							}, 1000);
+						});
+					}
+					setTimeout(addScrollEvents, 5000)	
+				});`
+			}}>
+			</script>
 		</html>
 	)
 }
