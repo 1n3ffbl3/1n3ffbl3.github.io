@@ -67,12 +67,11 @@ const AboutMe = () => (
 			<H4>About me</H4>
 			<AboutMeText>My name is Marta. Nearly a year ago, I finished Elewa Academy
 							Full Stack Web Development bootcamp.
-							Since then, I have successfully finished my first internship and afterwards continued with
-							first Junior Full Stack JavaScript developer job.
-							My goal, from the very beginning, is to become an awesome Front End developer. Every day I am
-							continuously improving my knowledge of Front End
-							technologies, to become the best in the market. At previous company I was working with Vue.js,
-							also thanks to previous experience with React.js,
+							Since then, I have successfully finished my internship and afterwards continued with
+							Junior Full Stack JavaScript developer job.
+							My goal, from the very beginning, is to become an awesome developer. Every day I am
+							continuously improving my knowledge of Frontend/Backend
+							technologies, to become the best in the market. Currently I am programming in Node.js, Vue.js, React.js and Gatsby.js.
 							I am looking for a new challenge as a Junior Full Stack JavaScript Developer.
 		</AboutMeText>
 		</TextWrapper>
