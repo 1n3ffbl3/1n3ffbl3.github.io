@@ -97,7 +97,7 @@ export default class ProjectWrapper extends React.Component {
 				title: "Phone Book application",
 				text: "Created using React.js and Node.js with use of PostgresDb. This is example of Phone book dictionary.",
 				codeLink: "https://github.com/1n3ffbl3/Phone-Book-App",
-				demoLink: ""
+				demoLink: "https://1n3ffbl3.github.io/Phone-Book-App/"
 			},
 			{
 				image: spacer,

@@ -1,0 +1,13 @@
+{
+	"version": 2,
+	"name": "1n3ffbl3-portfolio",
+	"builds": [
+		{
+			"src": "package.json",
+			"use": "@now/static-build",
+			"config": {
+				"distDir": "public"
+			}
+		}
+	]
+}
