@@ -1,16 +1,16 @@
 import React from 'react';
 import Layout from '../layout/Layout';
-import MenuWrapper from '../components/Menu/MenuWrapper';
 import AboutMe from '../components/AboutMe/AboutMe';
 import ProjectWrapper from '../components/Projects/ProjectWrapper';
 import FooterWrapper from '../components/Footer/FooterWrapper';
+import HeroImage from '../components/HeroImage/HeroImage';
 
 
-const IndexPage = ({ children }) => (
+const IndexPage = ({ children }) =>  (
 	<Layout>
-		<MenuWrapper>
+		<HeroImage>
 			{children}
-		</MenuWrapper>
+		</HeroImage>
 		<AboutMe>
 			{children}
 		</AboutMe>
@@ -21,6 +21,6 @@ const IndexPage = ({ children }) => (
 			{children}
 		</FooterWrapper>
 	</Layout>
-);
+)
 
 export default IndexPage;

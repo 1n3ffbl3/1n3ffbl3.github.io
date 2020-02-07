@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 const MainHeader = styled.h1`
-	font-family: sans serif;
-	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 85px;
     letter-spacing: 3px;
-	text-transform: uppercase;
 	text-align: center;
-	position: relative;
+	position: center;
 	padding: 0 0 20px;
+	color: ${({ theme }) => theme.primaryHeather};
+	font-weight: 400;
 `;
 
 export default MainHeader;
