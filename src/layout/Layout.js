@@ -17,7 +17,7 @@ const StyledWrapper = styled.div`
 	padding: 0;
 	width: 100%;
 	height: 100vh;
-	background-color: black;
+	background-color: pink;
 	background-size: cover;
 `;
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import pictureMe from '../../images/pictureMe_black_and_white.jpg';
+import maxScreenWidth from '../../utils/media';
 
 const AboutMeWrapper = styled.div`
 	display: flex;
@@ -11,18 +11,26 @@ const AboutMeWrapper = styled.div`
 	background-color: white;
 	background-size: cover;
 	background-repeat: no-repeat;
+
+	${maxScreenWidth.xs`
+		height: 40vh;
+		padding: 20px;
+	`}
+
+	${maxScreenWidth.sm`
+		height: 40vh;
+		padding: 20px;
+	`}
+
+	${maxScreenWidth.md`
+		height: 40vh;
+		padding: 20px;
+		justify-content: center;
+		text-align: center;
+		display: inline-block;
+	`}
 `;
 
-const ImageWrapper = styled.div`
-	width: 50%;
-	padding: 20px 10px 20px 10px;
-`;
-
-const Image = styled.img`
-	max-width: 100%;
-	border-radius: 50%;
-	content: url(${pictureMe});
-`;
 
 const TextWrapper = styled.div`
 	display: flex;
@@ -40,7 +48,15 @@ const H4 = styled.h4`
    	font-family: 'Montserrat', sans-serif;
 	font-weight: 500px;
 	font-size: 22px;
-    text-align: center; 
+	text-align: center;
+	
+	${maxScreenWidth.sm`
+		padding: 0;	
+	`}
+
+	${maxScreenWidth.md`
+		padding: 0;	
+	`}
 `;
 
 const AboutMeText = styled.p`
@@ -56,13 +72,18 @@ const AboutMeText = styled.p`
 	font-weight: normal;
 	line-height: 1.6;
 	text-align: center;
+
+	${maxScreenWidth.xs`
+		padding: 0 10px;
+	`}
+
+	${maxScreenWidth.sm`
+		padding: 0 40px;
+	`}
 `;
 
 const AboutMe = () => (
 	<AboutMeWrapper id="aboutMe">
-		<ImageWrapper>
-			<Image />
-		</ImageWrapper>
 		<TextWrapper>
 			<H4>About me</H4>
 			<AboutMeText>My name is Marta. Nearly a year ago, I finished Elewa Academy

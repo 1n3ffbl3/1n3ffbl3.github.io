@@ -13,6 +13,7 @@ import CardTitle from './Card/CardTitle';
 import CardText from './Card/CardText';
 import CardLink from './Card/CardLink';
 import CardImage from './Card/CardImage';
+import maxScreenWidth from '../../utils/media';
 
 const ProjectsWrapper = styled.div`
 	display: flex;
@@ -21,7 +22,15 @@ const ProjectsWrapper = styled.div`
 	flex-grow: 1;
 	box-sizing: border-box;
     place-content: center space-evenly;
-    align-items: center;
+	align-items: center;
+	
+	${maxScreenWidth.xs`
+		padding: 0;
+	`}
+
+	${maxScreenWidth.sm`
+		padding: unset;
+	`}
 `;
 
 const CardWrapper = styled.div`
@@ -33,6 +42,15 @@ const CardWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	margin: 50px;
+
+	${maxScreenWidth.sm`
+		margin-bottom: 10px;
+		padding: 30px;
+		position: relative;
+		width: 35%;
+		float: right;
+		flex-grow: 1;
+	`}
 `;
 
 const H4 = styled.h4`
