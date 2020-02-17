@@ -4,6 +4,7 @@ import { FaInstagram } from 'react-icons/fa';
 import { FaFacebookF } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
+import { mobile, tablet } from '../../utils/media';
 
 const FooterLink = styled.a`
 	text-decoration: none;
@@ -11,12 +12,21 @@ const FooterLink = styled.a`
 	font-size: 24px;
 	float: right;
 	padding: 40px 20px;
+
+	${mobile`
+		padding: 40px 20px 20px 20px;
+	`}
 `;
 
 const LinksWrapper = styled.div`
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
+
+	${tablet`
+		margin-top: 30px;
+	`}
+	
 `;
 
 const FooterLinkWrapper = () => (
