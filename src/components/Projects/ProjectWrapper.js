@@ -1,19 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import girlWithPearl from '../../images/girlWithPearl.jpg';
-import spacer from '../../images/spacerImage.jpg';
-import peopleHeart from '../../images/people_heart_shadow.jpg';
+import girlWithPearl from '../../images/girlPearl.jpg';
+import spacer from '../../images/nightBigSky.jpg';
+import peopleHeart from '../../images/people_heart.jpg';
 import tictactoe from '../../images/tictactoe.jpg';
-import codewars from '../../images/codewars5.jpg';
-import computer from '../../images/computer.jpg';
 import phoneBook from '../../images/phone-book.jpg';
-import saveTimeList from '../../images/saveTimeList.jpg';
+import rabbitTime from '../../images/rabbitTime.jpg';
 import CardBody from './Card/CardBody';
 import CardTitle from './Card/CardTitle';
 import CardText from './Card/CardText';
 import CardLink from './Card/CardLink';
 import CardImage from './Card/CardImage';
-import maxScreenWidth from '../../utils/media';
+import { mobile, tablet } from '../../utils/media';
 
 const ProjectsWrapper = styled.div`
 	display: flex;
@@ -23,12 +21,14 @@ const ProjectsWrapper = styled.div`
 	box-sizing: border-box;
     place-content: center space-evenly;
 	align-items: center;
+	background: ${({ theme }) => theme.primaryGrey};
+    background-size: cover;
 	
-	${maxScreenWidth.xs`
-		padding: 0;
+	${mobile`
+		padding: unset;
 	`}
 
-	${maxScreenWidth.sm`
+	${tablet`
 		padding: unset;
 	`}
 `;
@@ -36,16 +36,21 @@ const ProjectsWrapper = styled.div`
 const CardWrapper = styled.div`
 	padding: 20px;
 	font-weight: lighter;
-	box-shadow: 0 20px 40px -5px rgba(0,0,0,.3);
     width: 20rem; 
 	height: 35em;
 	display: flex;
 	flex-direction: column;
 	margin: 50px;
 
-	${maxScreenWidth.sm`
+	${mobile`
+		width: 100%;
+		margin: unset;
+		padding: 20px;
+	`}
+
+	${tablet`
 		margin-bottom: 10px;
-		padding: 30px;
+		padding: unset;
 		position: relative;
 		width: 35%;
 		float: right;
@@ -55,16 +60,17 @@ const CardWrapper = styled.div`
 
 const H4 = styled.h4`
     background: transparent;
-    color: #000;
+    color: ${({ theme }) => theme.primaryBlack};
     text-align: center;
     margin-top: 10px;
     margin-bottom: 5px;
     padding: 40px;
     padding-top: 60px;
    	font-family: 'Montserrat', sans-serif;
-	font-weight: 500px;
-	font-size: 22px;
-    text-align: center; 
+	font-weight: 500;
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
 `;
 
 const CardLinkWrapper = styled.div`
@@ -97,20 +103,6 @@ export default class ProjectWrapper extends React.Component {
 				demoLink: "https://1n3ffbl3.github.io/studying-with-specs/"
 			},
 			{
-				image: codewars,
-				title: "Codewars Repository",
-				text: "Set of solutions for codewars challenges.",
-				codeLink: "https://github.com/1n3ffbl3/Codewars_gallery",
-				demoLink: "https://1n3ffbl3.github.io/Codewars_gallery/"
-			},
-			{
-				image: computer,
-				title: "The Programmer's Oath",
-				text: "Created in github pages.",
-				codeLink: "https://github.com/1n3ffbl3/programmers-oath-template",
-				demoLink: "https://1n3ffbl3.github.io/programmers-oath-template/"
-			},
-			{
 				image: phoneBook,
 				title: "Phone Book application",
 				text: "Created using React.js and Node.js with use of PostgresDb. This is example of Phone book dictionary.",
@@ -125,7 +117,7 @@ export default class ProjectWrapper extends React.Component {
 				demoLink: "https://1n3ffbl3.github.io/spacer-hellomarta/"
 			},
 			{
-				image: saveTimeList,
+				image: rabbitTime,
 				title: "Save time list application",
 				text: "This React application helps you to organize things. It allows you to create three lists : list of recipes, check-out list and things to see during lifetime.",
 				codeLink: "https://github.com/1n3ffbl3/Save-Time-List",

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import maxScreenWidth from '../../utils/media';
+import { mobile, tablet } from '../../utils/media';
 
 const MainHeader = styled.h1`
 	font-family: 'Montserrat', sans-serif;
@@ -11,8 +11,12 @@ const MainHeader = styled.h1`
 	color: ${({ theme }) => theme.primaryHeather};
 	font-weight: 400;
 
-	${maxScreenWidth.xs`
-		font-size: 55px;
+	${mobile`
+		font-size: 45px;
+	`}
+
+	${tablet`
+		font-size: 60px;
 	`}
 `;
 

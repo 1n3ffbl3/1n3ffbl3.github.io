@@ -6,6 +6,7 @@ const CardTitle = styled.p`
 	height: 6rem;
 	width: 100%;
 	padding: 0 20px 0 20px;
+	line-height: 1.6;
 	
 `;
 

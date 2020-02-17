@@ -1,11 +1,11 @@
 import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import MainHeader from '../Header/MainHeader';
-import maxScreenWidth from '../../utils/media';
-import { theme } from '../../utils/theme';
+import { mobile, tablet } from '../../utils/media';
 import { useOnClickOutside } from '../../hooks/hooks';
 import Burger from '../Navigation/Burger/Burger';
 import MenuPage from '../Navigation/MenuPage/MenuPage';
+
 
 const HeroImageFrame = styled.div`
     padding: 70px 26px 26px;
@@ -24,17 +24,12 @@ const HeroBackgroundImageWrapper = styled.div`
     flex-direction: column;
     text-align: center;
 
-    ${maxScreenWidth.xs`
-        background-color: ${({ theme }) => theme.primaryAqua};
-        height: 40vh;
+    ${mobile`
+        height: 50vh;
     `}
 
-    ${maxScreenWidth.sm`
-        height: 40vh;
-    `}
-
-    ${maxScreenWidth.md`
-        height: 40vh;
+    ${tablet`
+        height: 70vh;
     `}
 `;
 
@@ -48,6 +43,14 @@ const ButtonDiscover = styled.a`
     text-transform: uppercase;
     position: center;
     letter-spacing: 2px;
+
+    ${mobile`
+        font-size: 12px;
+    `}
+
+    ${tablet`
+        font-size: 16px;    
+    `}
 `;
 
 const HeroImage = () => {
