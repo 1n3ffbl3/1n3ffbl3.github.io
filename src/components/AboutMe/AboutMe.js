@@ -1,33 +1,52 @@
 import React from 'react';
 import styled from 'styled-components';
-import maxScreenWidth from '../../utils/media';
+import { mobile, tablet } from '../../utils/media';
+import arrow_right from '../../images/arrow_right.png';
 
 const AboutMeWrapper = styled.div`
 	display: flex;
 	flex-direction: row;
-	padding: 250px 60px 20px 60px;
+	padding: 30px 100px 20px;
 	width: 100%;
-	height: 100vh;
+	height: 30vh;
 	background-color: white;
 	background-size: cover;
 	background-repeat: no-repeat;
+	justify-content: center;
 
-	${maxScreenWidth.xs`
+	${mobile`
 		height: 40vh;
 		padding: 20px;
+		flex-direction: column;
 	`}
 
-	${maxScreenWidth.sm`
-		height: 40vh;
-		padding: 20px;
+	${tablet`
+		height: 25vh;
+		padding: 40px 0;
+	`}
+`;
+
+const ImageWrapper = styled.div`
+	width: 50%;
+	padding: 20px 10px 20px 10px;
+
+	${mobile`
+		width: 20%;
+		padding: 0;
 	`}
 
-	${maxScreenWidth.md`
-		height: 40vh;
-		padding: 20px;
-		justify-content: center;
-		text-align: center;
-		display: inline-block;
+	${tablet`
+		width: 50%;
+		padding: 20px 10px 20px 10px;
+	`}
+`;
+
+const Image = styled.image`
+	max-width: 40%;
+	content: url(${arrow_right});
+
+	${tablet`
+		max-width: 50%;
 	`}
 `;
 
@@ -35,65 +54,69 @@ const AboutMeWrapper = styled.div`
 const TextWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
+	width: 40%;
+
+	${mobile`
+		width: 100%;
+	`}
+
+	${tablet`
+		width: 50%;
+	`}
 `;
 
 const H4 = styled.h4`
     background: transparent;
-    color: #000;
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    padding: 40px;
-    padding-top: 10px;
    	font-family: 'Montserrat', sans-serif;
-	font-weight: 500px;
-	font-size: 22px;
-	text-align: center;
+	font-weight: 400;
+	font-size: 12px;
+	text-align: left;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 	
-	${maxScreenWidth.sm`
+	${mobile`
 		padding: 0;	
+		margin-top: 10px;
+		font-size: 12px;
+		text-align: left;
 	`}
 
-	${maxScreenWidth.md`
-		padding: 0;	
+	${tablet`
+		padding: 0;
+		font-size: 12px;
+		text-align: left;
+		padding: unset;
 	`}
 `;
 
 const AboutMeText = styled.p`
   	background: transparent;
-    color: #000;
-    text-align: center;
-    margin-bottom: 70px;
-    padding: 40px;
-    padding-right: 150px;
-    padding-left: 150px;
-    padding-top: 8px;
-   	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 70px;
+   	font-family: 'Crimson Pro', serif;
 	font-weight: normal;
 	line-height: 1.6;
-	text-align: center;
+	text-align: left;
+	font-size: 18px;
 
-	${maxScreenWidth.xs`
-		padding: 0 10px;
+	${mobile`
+		padding: unset;
+		text-align: left;
 	`}
 
-	${maxScreenWidth.sm`
-		padding: 0 40px;
+	${tablet`
+		padding: 0 60px 0 0;
+		text-align: left;
 	`}
 `;
 
 const AboutMe = () => (
 	<AboutMeWrapper id="aboutMe">
+		<ImageWrapper>
+			<Image />
+		</ImageWrapper>
 		<TextWrapper>
 			<H4>About me</H4>
-			<AboutMeText>My name is Marta. Nearly a year ago, I finished Elewa Academy
-							Full Stack Web Development bootcamp.
-							Since then, I have successfully finished my internship and afterwards continued with
-							Junior Full Stack JavaScript developer job.
-							My goal, from the very beginning, is to become an awesome developer. Every day I am
-							continuously improving my knowledge of Frontend/Backend
-							technologies, to become the best in the market. Currently I am programming in Node.js, Vue.js, React.js and Gatsby.js.
-							I am looking for a new challenge as a Junior Full Stack JavaScript Developer.
+			<AboutMeText> I'm a Junior Web Developer focused on improving knowledge of front-end technologies, to become the best in the market.
 		</AboutMeText>
 		</TextWrapper>
 	</AboutMeWrapper>
