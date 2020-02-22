@@ -29,10 +29,11 @@ const AboutMeWrapper = styled.div`
 const ImageWrapper = styled.div`
 	width: 50%;
 	padding: 20px 10px 20px 10px;
+	display: flex;
 
 	${mobile`
 		width: 20%;
-		padding: 0;
+		padding: unset;
 	`}
 
 	${tablet`
@@ -42,11 +43,17 @@ const ImageWrapper = styled.div`
 `;
 
 const Image = styled.image`
-	max-width: 40%;
 	content: url(${arrow_right});
+	object-fit: contain;
+	height: 100%;
+	width: 100%;
 
 	${tablet`
 		max-width: 50%;
+	`}
+
+	${mobile`
+		display: none;
 	`}
 `;
 
@@ -116,7 +123,7 @@ const AboutMe = () => (
 		</ImageWrapper>
 		<TextWrapper>
 			<H4>About me</H4>
-			<AboutMeText> I'm a Junior Web Developer focused on improving knowledge of front-end technologies, to become the best in the market.
+			<AboutMeText> I'm a Junior Web Developer focused on improving knowledge of frontend technologies, to become the best in the market.
 		</AboutMeText>
 		</TextWrapper>
 	</AboutMeWrapper>
