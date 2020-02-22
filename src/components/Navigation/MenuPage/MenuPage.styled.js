@@ -20,7 +20,8 @@ export const StyledMenuPage = styled.nav`
     width: 100%;
   }
 
-  a {
+  span {
+    cursor: pointer;
     font-size: 2rem;
     text-transform: uppercase;
     padding: 2rem 0;
