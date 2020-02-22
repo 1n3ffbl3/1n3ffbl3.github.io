@@ -2,22 +2,26 @@ import React from 'react';
 import { bool } from 'prop-types';
 import { StyledMenuPage } from './MenuPage.styled';
 
-const MenuPage = ({ open, ...props }) => {
+/**
+ * Author of this code is GitHub user @maximakymenko
+ * Repository: https://github.com/maximakymenko/react-burger-menu-article-app
+ */
+const MenuPage = ({ open, setOpen, ...props }) => {
   
   const isHidden = open ? true : false;
   const tabIndex = isHidden ? 0 : -1;
 
   return (
     <StyledMenuPage open={open} aria-hidden={!isHidden} {...props}>
-      <a href="/" tabIndex={tabIndex} id="navAboutMe">
+      <span onClick={() => setOpen(false)} tabIndex={tabIndex} id="navAboutMe">
         About me
-      </a>
-      <a href="/" tabIndex={tabIndex}>
+      </span>
+      <span onClick={() => setOpen(false)} tabIndex={tabIndex} id="navProjects">
         Projects
-        </a>
-      <a href="/" tabIndex={tabIndex}>
+        </span>
+      <span onClick={() => setOpen(false)} tabIndex={tabIndex} id="navContact">
         Contact
-        </a>
+      </span>
     </StyledMenuPage>
   )
 }
