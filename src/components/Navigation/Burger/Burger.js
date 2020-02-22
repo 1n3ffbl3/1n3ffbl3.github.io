@@ -2,6 +2,10 @@ import React from 'react';
 import { bool, func } from 'prop-types';
 import { StyledBurger } from './Burger.styled';
 
+/**
+ * Author of this code is GitHub user @maximakymenko
+ * Repository: https://github.com/maximakymenko/react-burger-menu-article-app
+ */
 const Burger = ({ open, setOpen, ...props }) => {
   
   const isExpanded = open ? true : false;
