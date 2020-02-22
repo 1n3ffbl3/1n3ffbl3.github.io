@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import girlWithPearl from '../../images/girlPearl.jpg';
 import spacer from '../../images/nightBigSky.jpg';
-import peopleHeart from '../../images/people_heart.jpg';
 import tictactoe from '../../images/tictactoe.jpg';
-import phoneBook from '../../images/phone-book.jpg';
-import rabbitTime from '../../images/rabbitTime.jpg';
+import bookInception from '../../images/bookInception2.jpg';
+import rabbitTime from '../../images/rabbitTime2.jpg';
+import lemon from '../../images/lemon.jpg';
 import CardBody from './Card/CardBody';
 import CardTitle from './Card/CardTitle';
 import CardText from './Card/CardText';
@@ -82,13 +82,6 @@ export default class ProjectWrapper extends React.Component {
 	state = {
 		projects: [
 			{
-				image: peopleHeart,
-				title: "Application People 4People",
-				text: "Application which is designed to provide an easier way of communication between people and organizations who want to help others.",
-				codeLink: "https://github.com/Mariana88/MandM-FinalProject",
-				demoLink: "https://1n3ffbl3.github.io/MyFirstApplication/"
-			},
-			{
 				image: girlWithPearl,
 				title: "Tribute Page",
 				text: "Tribute page about my favourite writer Tracy Chevalier.",
@@ -96,14 +89,14 @@ export default class ProjectWrapper extends React.Component {
 				demoLink: "https://1n3ffbl3.github.io/tribute"
 			},
 			{
-				image: tictactoe,
-				title: "Tictactoe game",
-				text: "Implementation in JavaScript.",
-				codeLink: "https://github.com/1n3ffbl3/studying-with-specs",
-				demoLink: "https://1n3ffbl3.github.io/studying-with-specs/"
+				image: lemon,
+				title: "Groceries application",
+				text: "App which allows you to create a list of items to buy.",
+				codeLink: "https://github.com/1n3ffbl3/Groceries-App",
+				demoLink: "https://groceries-app.mizgierm.now.sh/"
 			},
 			{
-				image: phoneBook,
+				image: bookInception,
 				title: "Phone Book application",
 				text: "Created using React.js and Node.js with use of PostgresDb. This is example of Phone book dictionary.",
 				codeLink: "https://github.com/1n3ffbl3/Phone-Book-App",
@@ -122,6 +115,13 @@ export default class ProjectWrapper extends React.Component {
 				text: "This React application helps you to organize things. It allows you to create three lists : list of recipes, check-out list and things to see during lifetime.",
 				codeLink: "https://github.com/1n3ffbl3/Save-Time-List",
 				demoLink: "https://1n3ffbl3.github.io/Save-Time-List/"
+			},
+			{
+				image: tictactoe,
+				title: "Tictactoe game",
+				text: "Implementation in JavaScript.",
+				codeLink: "https://github.com/1n3ffbl3/studying-with-specs",
+				demoLink: "https://1n3ffbl3.github.io/studying-with-specs/"
 			},
 		]
 	}
