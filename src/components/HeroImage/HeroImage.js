@@ -43,6 +43,12 @@ const ButtonDiscover = styled.a`
     text-transform: uppercase;
     position: center;
     letter-spacing: 2px;
+    
+    &:hover {
+        color: ${({ theme }) => theme.primaryNavy};
+        background-color: ${({ theme }) => theme.primaryWhite};
+        transition: opacity 1s 1.5s ease, background .7s, color .7s;
+    }
 
     ${mobile`
         font-size: 12px;
@@ -67,11 +73,11 @@ const HeroImage = () => {
             </div>
             <HeroBackgroundImageWrapper>
                 <MainHeader>
-                    Junior JS <br />
+                    Junior Web <br />
                     Developer
                 </MainHeader>
                 <div>
-                    <ButtonDiscover>
+                    <ButtonDiscover id="btnDiscover">
                         Discover
                     </ButtonDiscover>
                 </div>
