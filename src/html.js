@@ -32,29 +32,14 @@ export default function HTML(props) {
 			</body>
 			<script dangerouslySetInnerHTML={{
 				__html: `
-				function addFloatingMenu() {
-					navbar = document.getElementById("navbar")
-					aboutMe = document.getElementById("aboutMe")
-					if (navbar && aboutMe) {
-						sticky = aboutMe.offsetTop
-						if (window.pageYOffset >= sticky) {
-							navbar.classList.add("floatmenu")
-							navbar.classList.add("sticky")
-						} else {
-							navbar.classList.remove("floatmenu")
-							navbar.classList.remove("sticky")
-						}
-					}
-				}
-				window.onscroll = function () { addFloatingMenu() }`
-			}}>
-			</script>
-			<script dangerouslySetInnerHTML={{
-				__html: `
 				$(document).ready(function () {
-					var ni = $("#niAboutMe")
 					function addScrollEvents() {
 						$("#navAboutMe").click(function () {
+							$('html, body').animate({
+								scrollTop: $("#aboutMe").offset().top
+							}, 1000);
+						});
+						$("#btnDiscover").click(function () {
 							$('html, body').animate({
 								scrollTop: $("#aboutMe").offset().top
 							}, 1000);
@@ -70,7 +55,7 @@ export default function HTML(props) {
 							}, 1000);
 						});
 					}
-					setTimeout(addScrollEvents, 1500)	
+					setTimeout(addScrollEvents, 1500);	
 				});`
 			}}>
 			</script>
