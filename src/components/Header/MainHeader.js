@@ -12,7 +12,8 @@ const MainHeader = styled.h1`
 	font-weight: 400;
 
 	${mobile`
-		font-size: 45px;
+		font-size: 30px;
+		text-transform: unset;
 	`}
 
 	${tablet`
