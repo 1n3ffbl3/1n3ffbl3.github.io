@@ -55,13 +55,13 @@ const MenuPage = ({ open, setOpen, ...props }) => {
 
   return (
     <StyledMenuPage open={open} aria-hidden={!isHidden} {...props}>
-      <span onClick={() => setOpen(false)} tabIndex={tabIndex} id="navAboutMe">
+      <span onClick={() => setOpen(false)} onKeyDown={() => setOpen(false)} role="button" tabIndex={tabIndex} id="navAboutMe">
         About me
       </span>
-      <span onClick={() => setOpen(false)} tabIndex={tabIndex} id="navProjects">
+      <span onClick={() => setOpen(false)} onKeyDown={() => setOpen(false)} role="button" tabIndex={tabIndex} id="navProjects">
         Projects
         </span>
-      <span onClick={() => setOpen(false)} tabIndex={tabIndex} id="navContact">
+      <span onClick={() => setOpen(false)} onKeyDown={() => setOpen(false)} role="button" tabIndex={tabIndex} id="navContact">
         Contact
       </span>
     </StyledMenuPage>
