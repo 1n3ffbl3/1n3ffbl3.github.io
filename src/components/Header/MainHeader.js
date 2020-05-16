@@ -2,13 +2,13 @@ import styled from 'styled-components';
 import { mobile, tablet } from '../../utils/media';
 
 const MainHeader = styled.h1`
-	font-family: 'Montserrat', sans-serif;
-	font-size: 85px;
-    letter-spacing: 3px;
+	font-family: 'Crimson Pro', serif;
+	font-size: 48px;
+	line-height: 1.2;
 	text-align: center;
 	position: center;
-	padding: 0 0 20px;
-	color: ${({ theme }) => theme.primaryHeather};
+	padding: 0 0 5px;
+	color: ${({ theme }) => theme.primaryWhite};
 	font-weight: 400;
 
 	${mobile`
