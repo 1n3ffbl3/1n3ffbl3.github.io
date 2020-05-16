@@ -16,7 +16,7 @@ const AboutMeWrapper = styled.div`
 
 	${mobile`
 		height: 40vh;
-		padding: 20px;
+		padding: 20px 26px 20px 26px;
 		flex-direction: column;
 	`}
 
@@ -107,6 +107,7 @@ const AboutMeText = styled.p`
 
 	${mobile`
 		padding: unset;
+		margin-bottom: unset;
 		text-align: left;
 	`}
 

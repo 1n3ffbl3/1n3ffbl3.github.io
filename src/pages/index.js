@@ -9,24 +9,24 @@ import styled from 'styled-components';
 import { mobile, tablet } from '../utils/media';
 
 const ButtonDiscover = styled.a`
-    border: 1px solid ${({ theme }) => theme.primaryWhite};
+    border: 1px solid ${({ theme }) => theme.primaryNavy};
     display: inline-block;
     padding: 13px 18px 10px 18px;
     cursor: pointer;
     text-decoration: none;
-    color: ${({ theme }) => theme.primaryWhite};
+    color: ${({ theme }) => theme.primaryNavy};
     text-transform: uppercase;
     position: center;
     letter-spacing: 2px;
     
     &:hover {
         color: ${({ theme }) => theme.primaryNavy};
-        background-color: ${({ theme }) => theme.primaryWhite};
+        background-color: ${({ theme }) => theme.primaryHeather2};
         transition: opacity 1s 1.5s ease, background .7s, color .7s;
     }
 
     ${mobile`
-        font-size: 12px;
+        font-size: 10px;
     `}
 
     ${tablet`
@@ -39,9 +39,10 @@ const IndexPage = ({ children, data }) =>  (
 		<BgImage      
       		title="binoculars"
       		fluid={data.binoculars.childImageSharp.fluid}>
-			<div>
+			<div style={{ flex: "1"}}>
 				<MainHeader>
-					Junior Web Developer
+					Junior <br/>
+					Web Developer
 				</MainHeader>
 				<div>
 					<ButtonDiscover id="btnDiscover">
@@ -49,6 +50,7 @@ const IndexPage = ({ children, data }) =>  (
 					</ButtonDiscover>
 				</div>
 			</div>
+			<div style={{ flex: "1"}}></div>
     	</BgImage>
 		<AboutMe>
 			{children}
@@ -64,7 +66,7 @@ const IndexPage = ({ children, data }) =>  (
 
 export const query = graphql`
 query {
-	binoculars: file(relativePath: { eq: "hightbinoculars.jpg" }) {
+	binoculars: file(relativePath: { eq: "binoculars1.jpeg" }) {
 		childImageSharp {
 			fluid(maxWidth: 10000) {
 				...GatsbyImageSharpFluid
