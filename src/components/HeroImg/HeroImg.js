@@ -57,7 +57,8 @@ const HeroImg = () => {
     let opacityValue = Math.abs(distanceFromTop) / imageHeight;
     image.style.opacity = 1 - opacityValue;
   }
-  document.addEventListener("scroll", (event) => handleScroll(event));
+
+  document && document.addEventListener("scroll", (event) => handleScroll(event));
 
   return (
     <HeroImageFrame>
