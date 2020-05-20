@@ -1,7 +1,7 @@
 {
 	"name": "portfolio",
 	"private": true,
-	"description": "",
+	"description": "Personal portfolio created in Gatsby JS.",
 	"version": "2.0.0",
 	"author": "1n3ffbl3",
 	"dependencies": {
