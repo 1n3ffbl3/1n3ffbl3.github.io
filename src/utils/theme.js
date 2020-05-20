@@ -15,5 +15,4 @@ export const theme = {
 	primaryHeather2: '#B1A7AF',
 	primaryBlack: '#000000',
 	primaryGrey: '#EDECEC',
-    mobile: '576px',
 };

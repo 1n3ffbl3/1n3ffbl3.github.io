@@ -4,29 +4,31 @@ import { mobile, tablet } from '../../utils/media';
 
 export const HeroImageFrame = styled.div`
   padding: 70px 26px 26px;
-  maxWidth: 960px;
   background-color: ${({ theme }) => theme.primaryWhite};
-  position: relative;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
 `;
 
 export const HeroBgImage = styled(BackgroundImage)`
   top: 0;
   left: 0;
   padding: 50px 26px 26px;
-  index-z: -1;
+  z-index: -1;
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
 
   ${mobile`
     width: 100%;
-    height: 100vh;
+    height: 100%;
   `}
 
   ${tablet`
     width: 100%;
-    height: 100vh;
+    height: 100%;
   `}
 `;
 

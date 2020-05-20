@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import girlWithPearl from '../../images/girlPearl.jpg';
+import girlWithPearl from '../../images/girlWithPearl.jpg';
 import bluePhone from '../../images/bluePhone.jpg';
 import rabbitTime from '../../images/rabbitTime.jpg';
 import lemon from '../../images/lemon.jpg';
@@ -22,7 +22,9 @@ const ProjectsWrapper = styled.div`
     place-content: center space-evenly;
 	align-items: center;
 	background: ${({ theme }) => theme.primaryGrey};
-    background-size: cover;
+	background-size: cover;
+	z-index: 5;
+	position: relative;
 	
 	${mobile`
 		padding: unset;
@@ -59,7 +61,7 @@ const CardWrapper = styled.div`
 `;
 
 const H4 = styled.h4`
-    background: transparent;
+	background-color: ${({ theme }) => theme.primaryWhite};
     color: ${({ theme }) => theme.primaryBlack};
     text-align: center;
     margin-top: 10px;
@@ -71,6 +73,8 @@ const H4 = styled.h4`
 	font-size: 20px;
 	text-align: center;
 	text-transform: uppercase;
+	z-index: 5;
+	position: relative;
 
 	${mobile`
 		margin-top: unset;

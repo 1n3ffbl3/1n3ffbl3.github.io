@@ -11,6 +11,8 @@ const FooterImageWrapper = styled.div`
 	background-color: ${({ theme }) => theme.primaryNavy};
 	background-size: cover;
 	background-repeat: no-repeat;
+	z-index: 5;
+	position: relative;
 
 	${mobile`
 		height: 20%;

@@ -13,6 +13,8 @@ const AboutMeWrapper = styled.div`
 	background-size: cover;
 	background-repeat: no-repeat;
 	justify-content: center;
+	z-index: 5;
+	position: relative;
 
 	${mobile`
 		height: 40vh;
@@ -45,8 +47,8 @@ const ImageWrapper = styled.div`
 const Image = styled.image`
 	content: url(${arrow_right});
 	object-fit: contain;
-	height: 100%;
-	width: 100%;
+	height: 50%;
+	width: 50%;
 
 	${tablet`
 		max-width: 50%;
@@ -61,7 +63,7 @@ const Image = styled.image`
 const TextWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
-	width: 40%;
+	width: 29%;
 
 	${mobile`
 		width: 100%;
