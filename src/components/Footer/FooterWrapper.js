@@ -31,6 +31,10 @@ const H5 = styled.h5`
 	color: white;
 	text-align: center;
 	position: relative;
+
+	${mobile`
+		font-size: 11px;
+	`}
 `;
 
 
@@ -40,7 +44,7 @@ const FooterWrapper = () => {
 	return (
 		<FooterImageWrapper id="contact">
 			<FooterLinkWrapper />
-			<H5>Copyright &copy; {currentYear}</H5>
+			<H5>Version 2.0 Copyright &copy; {currentYear}</H5>
 		</ FooterImageWrapper>
 	);
 } 

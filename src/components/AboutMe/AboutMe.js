@@ -24,7 +24,7 @@ const AboutMeWrapper = styled.div`
 
 	${tablet`
 		height: 25vh;
-		padding: 40px 0;
+		padding: 40px 26px 0 26px;
 	`}
 `;
 
@@ -47,11 +47,12 @@ const ImageWrapper = styled.div`
 const Image = styled.image`
 	content: url(${arrow_right});
 	object-fit: contain;
-	height: 50%;
-	width: 50%;
+	height: 70%;
+	width: 55%;
 
 	${tablet`
-		max-width: 50%;
+		height: 65%;
+		width: 100%;
 	`}
 
 	${mobile`

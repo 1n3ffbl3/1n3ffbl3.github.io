@@ -61,13 +61,11 @@ const CardWrapper = styled.div`
 `;
 
 const H4 = styled.h4`
-	background-color: ${({ theme }) => theme.primaryWhite};
+	background-color: ${({ theme }) => theme.primaryGrey};
     color: ${({ theme }) => theme.primaryBlack};
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    padding: 40px;
-    padding-top: 60px;
+	margin: 0;
+    padding: 60px 40px 40px 40px;
    	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
 	font-size: 20px;
@@ -77,8 +75,8 @@ const H4 = styled.h4`
 	position: relative;
 
 	${mobile`
-		margin-top: unset;
-		padding-top: unset;
+		margin-top: 0;
+		padding-top: 60px;
 	`}
 `;
 
@@ -99,8 +97,9 @@ export default class ProjectWrapper extends React.Component {
 			{
 				image: map,
 				title: "List of countries",
-				text: "List of countries application enumerates all countries and EU countries. It also allows yyou to search for the country by its name.",
+				text: "List of countries application enumerates all countries and EU countries. It also allows you to search for the country by its name.",
 				codeLink: "https://github.com/1n3ffbl3/List-Of-Countries-App",
+				demoLink: "https://country-list.mizgierm.now.sh/",
 			},
 			{
 				image: lemon,

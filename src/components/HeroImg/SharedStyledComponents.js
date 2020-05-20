@@ -29,6 +29,7 @@ export const HeroBgImage = styled(BackgroundImage)`
   ${tablet`
     width: 100%;
     height: 100%;
+    padding: unset;
   `}
 `;
 
