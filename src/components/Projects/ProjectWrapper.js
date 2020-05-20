@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import girlWithPearl from '../../images/girlPearl.jpg';
-import spacer from '../../images/nightBigSky.jpg';
-import tictactoe from '../../images/tictactoe.jpg';
-import bookInception from '../../images/bookInception.jpg';
+import girlWithPearl from '../../images/girlWithPearl.jpg';
+import bluePhone from '../../images/bluePhone.jpg';
 import rabbitTime from '../../images/rabbitTime.jpg';
 import lemon from '../../images/lemon.jpg';
+import poodle from '../../images/poodleEars.jpg';
+import map from '../../images/map.jpg';
 import CardBody from './Card/CardBody';
 import CardTitle from './Card/CardTitle';
 import CardText from './Card/CardText';
@@ -22,7 +22,9 @@ const ProjectsWrapper = styled.div`
     place-content: center space-evenly;
 	align-items: center;
 	background: ${({ theme }) => theme.primaryGrey};
-    background-size: cover;
+	background-size: cover;
+	z-index: 5;
+	position: relative;
 	
 	${mobile`
 		padding: unset;
@@ -59,18 +61,23 @@ const CardWrapper = styled.div`
 `;
 
 const H4 = styled.h4`
-    background: transparent;
+	background-color: ${({ theme }) => theme.primaryGrey};
     color: ${({ theme }) => theme.primaryBlack};
     text-align: center;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    padding: 40px;
-    padding-top: 60px;
+	margin: 0;
+    padding: 60px 40px 40px 40px;
    	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
 	font-size: 20px;
 	text-align: center;
 	text-transform: uppercase;
+	z-index: 5;
+	position: relative;
+
+	${mobile`
+		margin-top: 0;
+		padding-top: 60px;
+	`}
 `;
 
 const CardLinkWrapper = styled.div`
@@ -82,46 +89,45 @@ export default class ProjectWrapper extends React.Component {
 	state = {
 		projects: [
 			{
+				image: poodle,
+				title: "Chat4people",
+				text: "Custom application to chat with people. Made with love and React.js, Sail.js and PostgresDb.",
+				codeLink: "https://github.com/1n3ffbl3/chat4people",
+			},
+			{
+				image: map,
+				title: "List of countries",
+				text: "List of countries application enumerates all countries and EU countries. It also allows you to search for the country by its name.",
+				codeLink: "https://github.com/1n3ffbl3/List-Of-Countries-App",
+				demoLink: "https://country-list.mizgierm.now.sh/",
+			},
+			{
+				image: lemon,
+				title: "Groceries application",
+				text: "App which allows you to create a grocery list.",
+				codeLink: "https://github.com/1n3ffbl3/Groceries-App",
+				demoLink: "https://groceries-app.mizgierm.now.sh/"
+			},
+			{
+				image: bluePhone,
+				title: "Phone Book application",
+				text: "Created with React.js and Node.js using PostgresDb. This is an example of a phone book.",
+				codeLink: "https://github.com/1n3ffbl3/Phone-Book-App",
+				demoLink: "https://1n3ffbl3.github.io/Phone-Book-App/"
+			},
+			{
+				image: rabbitTime,
+				title: "Save time list application",
+				text: "This React application helps you to organize things. It allows you to create three lists : a recipe list, a check-out list and things to see during your life.",
+				codeLink: "https://github.com/1n3ffbl3/Save-Time-List",
+				demoLink: "https://1n3ffbl3.github.io/Save-Time-List/"
+			},
+			{
 				image: girlWithPearl,
 				title: "Tribute Page",
 				text: "Tribute page about my favourite writer Tracy Chevalier.",
 				codeLink: "https://github.com/1n3ffbl3/tribute",
 				demoLink: "https://1n3ffbl3.github.io/tribute"
-			},
-			{
-				image: lemon,
-				title: "Groceries application",
-				text: "App which allows you to create a list of items to buy.",
-				codeLink: "https://github.com/1n3ffbl3/Groceries-App",
-				demoLink: "https://groceries-app.mizgierm.now.sh/"
-			},
-			{
-				image: bookInception,
-				title: "Phone Book application",
-				text: "Created using React.js and Node.js with use of PostgresDb. This is example of Phone book dictionary.",
-				codeLink: "https://github.com/1n3ffbl3/Phone-Book-App",
-				demoLink: "https://1n3ffbl3.github.io/Phone-Book-App/"
-			},
-			{
-				image: spacer,
-				title: "Spacer application",
-				text: "Application written in Vue.js. Thanks to this application you can search for a NASA photos by typing a space related expression.",
-				codeLink: "https://github.com/1n3ffbl3/spacer-hellomarta",
-				demoLink: "https://1n3ffbl3.github.io/spacer-hellomarta/"
-			},
-			{
-				image: rabbitTime,
-				title: "Save time list application",
-				text: "This React application helps you to organize things. It allows you to create three lists : list of recipes, check-out list and things to see during lifetime.",
-				codeLink: "https://github.com/1n3ffbl3/Save-Time-List",
-				demoLink: "https://1n3ffbl3.github.io/Save-Time-List/"
-			},
-			{
-				image: tictactoe,
-				title: "Tictactoe game",
-				text: "Implementation in JavaScript.",
-				codeLink: "https://github.com/1n3ffbl3/studying-with-specs",
-				demoLink: "https://1n3ffbl3.github.io/studying-with-specs/"
 			},
 		]
 	}
@@ -142,7 +148,9 @@ export default class ProjectWrapper extends React.Component {
 									<CardText>{project.text}</CardText>
 									<CardLinkWrapper>
 										<CardLink href={project.codeLink} target="_blank">Code</CardLink>
-										<CardLink href={project.demoLink} target="_blank">Demo</CardLink>
+										{project.demoLink && (
+											<CardLink href={project.demoLink} target="_blank">Demo</CardLink>
+										)}										
 									</CardLinkWrapper>
 								</CardBody>
 							</CardWrapper>

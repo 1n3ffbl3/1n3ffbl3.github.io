@@ -13,16 +13,18 @@ const AboutMeWrapper = styled.div`
 	background-size: cover;
 	background-repeat: no-repeat;
 	justify-content: center;
+	z-index: 5;
+	position: relative;
 
 	${mobile`
 		height: 40vh;
-		padding: 20px;
+		padding: 20px 26px 20px 26px;
 		flex-direction: column;
 	`}
 
 	${tablet`
 		height: 25vh;
-		padding: 40px 0;
+		padding: 40px 26px 0 26px;
 	`}
 `;
 
@@ -45,11 +47,12 @@ const ImageWrapper = styled.div`
 const Image = styled.image`
 	content: url(${arrow_right});
 	object-fit: contain;
-	height: 100%;
-	width: 100%;
+	height: 70%;
+	width: 55%;
 
 	${tablet`
-		max-width: 50%;
+		height: 65%;
+		width: 100%;
 	`}
 
 	${mobile`
@@ -61,7 +64,7 @@ const Image = styled.image`
 const TextWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
-	width: 40%;
+	width: 29%;
 
 	${mobile`
 		width: 100%;
@@ -107,6 +110,7 @@ const AboutMeText = styled.p`
 
 	${mobile`
 		padding: unset;
+		margin-bottom: unset;
 		text-align: left;
 	`}
 

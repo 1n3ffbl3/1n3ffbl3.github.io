@@ -12,7 +12,7 @@ export const theme = {
 	primaryAqua: '#1FE6E6',
 	primaryWhite: '#fff',
 	primaryHeather: '#F8E2ED',
+	primaryHeather2: '#B1A7AF',
 	primaryBlack: '#000000',
 	primaryGrey: '#EDECEC',
-    mobile: '576px',
 };
