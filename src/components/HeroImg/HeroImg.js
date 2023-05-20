@@ -72,8 +72,8 @@ const HeroImg = () => {
         id="backgroundImage">
         <Content style={{ width: "50vw"}}>
           <MainHeader>
-            Junior <br/>
-            Web Developer
+            Software <br/>
+            Developer
           </MainHeader>
           <div>
             <ButtonDiscover id="btnDiscover">

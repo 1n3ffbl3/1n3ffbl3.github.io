@@ -127,7 +127,7 @@ const AboutMe = () => (
 		</ImageWrapper>
 		<TextWrapper>
 			<H4>About me</H4>
-			<AboutMeText> I'm a Junior Web Developer focused on improving knowledge of frontend technologies, to become the best in the market.
+			<AboutMeText> I'm a Software Developer focused on improving knowledge of frontend technologies, to become the best in the market.
 		</AboutMeText>
 		</TextWrapper>
 	</AboutMeWrapper>
